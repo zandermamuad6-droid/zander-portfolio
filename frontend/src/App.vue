@@ -1,178 +1,314 @@
+
 <template>
-  <main class="portfolio">
+  <main>
+    <!-- Navigation -->
     <header class="navbar">
       <a class="logo" href="#home">ZM.</a>
 
-      <nav>
+      <nav class="nav-links">
+        <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
-        <a class="contact-link" href="#contact">Contact ↗</a>
+        <a href="#contact">Contact</a>
       </nav>
+
+      <a class="nav-button" href="#contact">Let's Talk <span>↗</span></a>
     </header>
 
-    <section id="home" class="hero">
-      <p class="eyebrow">● COMPUTER ENGINEERING STUDENT</p>
+    <!-- Hero -->
+    <section id="home" class="hero section-container">
+      <div class="hero-content">
+        <p class="eyebrow"><span class="status-dot"></span> AVAILABLE FOR OPPORTUNITIES</p>
 
-      <h1>
-        Hi, I'm Zander.<br />
-        I build <span>my future.</span>
-      </h1>
+        <h1>
+          Hi, I'm <span class="gradient-text">Zander.</span><br />
+          I build things for<br />
+          the <span class="gradient-text">digital world.</span>
+        </h1>
 
-      <p class="intro">
-        A computer engineering student learning web development,
-        exploring technology, and turning ideas into practical projects.
-      </p>
+        <p class="hero-description">
+          An aspiring developer passionate about creating useful,
+          modern, and user-friendly digital experiences.
+        </p>
 
-      <div class="actions">
-        <a class="button primary" href="#projects">Explore my work ↗</a>
-        <a class="button secondary" href="#contact">Get in touch</a>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">Explore My Work <span>↗</span></a>
+          <a class="button button-secondary" href="#about">More About Me</a>
+        </div>
+
+        <div class="hero-note">
+          <span class="note-line"></span>
+          <span>Designed and built while learning, one step at a time.</span>
+        </div>
       </div>
 
-      <p class="note">Currently learning web development from the ground up.</p>
+      <div class="hero-visual">
+        <div class="visual-glow"></div>
+        <div class="visual-card">
+          <div class="visual-card-top">
+            <span class="window-dot"></span>
+            <span class="window-dot"></span>
+            <span class="window-dot"></span>
+            <span class="visual-label">MY WORKSPACE</span>
+          </div>
+
+          <div class="code-display">
+            <p><span class="code-purple">const</span> developer = {</p>
+            <p class="code-indent">name: <span class="code-green">'Zander'</span>,</p>
+            <p class="code-indent">focus: <span class="code-green">'Web Development'</span>,</p>
+            <p class="code-indent">learning: <span class="code-green">'Every day'</span>,</p>
+            <p class="code-indent">building: <span class="code-green">'The future'</span></p>
+            <p>};</p>
+            <p class="code-comment">// Always keep learning.</p>
+          </div>
+
+          <div class="visual-card-bottom">
+            <span class="status-dot"></span>
+            Currently learning & building
+          </div>
+        </div>
+
+        <div class="floating-badge badge-top">✦ Creative mindset</div>
+        <div class="floating-badge badge-bottom">⌘ Developer in progress</div>
+      </div>
     </section>
 
-    <section id="about" class="section">
-      <p class="eyebrow">01 / ABOUT</p>
-      <h2>A little about <span>me.</span></h2>
+    <!-- About -->
+    <section id="about" class="section-container section-block">
+      <div class="section-heading">
+        <p class="eyebrow">01 / ABOUT ME</p>
+        <h2>A little about <span class="gradient-text">my journey.</span></h2>
+      </div>
 
       <div class="about-grid">
-        <h3>
-          I'm a Computer Engineering student interested in how technology
-          can solve real problems.
-        </h3>
-
-        <div class="muted">
+        <div class="about-card about-intro">
+          <span class="card-icon">✳</span>
+          <h3>Curious by nature.<br />Developer by passion.</h3>
           <p>
-            I'm starting my web development journey by learning the
-            fundamentals and applying them through hands-on projects.
+            I'm learning how to turn ideas into working projects through
+            coding, experimentation, and consistent practice.
           </p>
-          <p>
-            My interests include electronics, programming, problem-solving,
-            and building useful technology solutions.
-          </p>
+        </div>
 
-          <div class="info-row">
-            <span>EDUCATION</span>
-            <span>Computer Engineering</span>
-          </div>
-          <div class="info-row">
-            <span>FOCUS</span>
-            <span>Engineering & Technology</span>
-          </div>
-          <div class="info-row">
-            <span>CURRENT GOAL</span>
-            <span>Learn and build consistently</span>
-          </div>
+        <div class="about-card">
+          <span class="small-label">MY APPROACH</span>
+          <h3>Learn. Build. Improve.</h3>
+          <p>
+            I believe that progress comes from staying curious,
+            solving problems, and being willing to start from zero.
+          </p>
+        </div>
+
+        <div class="about-card">
+          <span class="small-label">MY GOAL</span>
+          <h3>Create meaningful work.</h3>
+          <p>
+            My goal is to grow my technical skills, build real-world
+            projects, and become a capable developer.
+          </p>
         </div>
       </div>
     </section>
 
-    <section id="projects" class="section">
-      <p class="eyebrow">02 / SELECTED WORK</p>
-      <h2>Projects in <span>progress.</span></h2>
+    <!-- Projects -->
+    <section id="projects" class="section-container section-block">
+      <div class="section-heading heading-row">
+        <div>
+          <p class="eyebrow">02 / SELECTED WORK</p>
+          <h2>Projects I've <span class="gradient-text">worked on.</span></h2>
+        </div>
+        <p class="heading-description">
+          A collection of projects from my learning journey.
+        </p>
+      </div>
 
-      <div class="project-grid">
+      <div class="projects-grid">
+        <!-- Electronics project -->
         <article class="project-card">
-          <div class="project-art circuit-art">
-            <div class="circuit-box">
-              <span>AC</span>
-              <strong>12V DC</strong>
-              <span>DC</span>
+          <div class="project-image-wrap">
+            <img
+                class="project-image"
+                src="/images/12v.avif"
+                alt="12V electronics project"
+            />
+          </div>
+
+          <div class="project-content">
+            <div class="project-meta">
+              <span class="project-category">ELECTRONICS</span>
+              <span class="project-status">Learning project</span>
+            </div>
+
+            <h3>Electronics Project</h3>
+            <p>
+              A hands-on electronics project showcasing my interest in
+              electronic components, circuits, and practical applications.
+            </p>
+
+            <div class="tag-list">
+              <span>Electronics</span>
+              <span>12V</span>
+              <span>Hardware</span>
             </div>
           </div>
-          <p class="eyebrow">ELECTRONICS · ENGINEERING</p>
-          <h3>Electronics Project</h3>
-          <p class="muted">
-            An electronics project focused on circuit concepts and practical
-            engineering applications.
-          </p>
-          <div class="tags">
-            <span>Electronics</span>
-            <span>Circuit Design</span>
-            <span>Engineering</span>
-          </div>
         </article>
 
+        <!-- ElectroHub -->
         <article class="project-card">
-          <div class="project-art code-art">
-            <div class="code-window">
-              <div class="window-bar">● ● ● &nbsp; portfolio.vue</div>
-              <pre><code>const portfolio = {
-  name: 'Zander',
-  learning: true
-}</code></pre>
+          <div class="electrohub-visual">
+            <div class="electrohub-window">
+              <div class="electrohub-top">
+                <span class="window-dot"></span>
+                <span class="window-dot"></span>
+                <span class="window-dot"></span>
+                <span class="electrohub-brand">Electro<span>Hub</span></span>
+              </div>
+
+              <div class="electrohub-body">
+                <span class="electrohub-kicker">COMPONENTS STORE</span>
+                <h4>Power your<br />next project.</h4>
+                <div class="electrohub-chip">Explore components ↗</div>
+                <div class="component-shapes">
+                  <span class="component-chip chip-one"></span>
+                  <span class="component-chip chip-two"></span>
+                  <span class="component-chip chip-three"></span>
+                </div>
+              </div>
             </div>
           </div>
-          <p class="eyebrow">WEB DEVELOPMENT · LEARNING</p>
-          <h3>Website Development</h3>
-          <p class="muted">
-            A website development project for practicing frontend design
-            and building functional web experiences.
-          </p>
-          <div class="tags">
-            <span>HTML & CSS</span>
-            <span>JavaScript</span>
-            <span>Vue.js</span>
+
+          <div class="project-content">
+            <div class="project-meta">
+              <span class="project-category">WEB DEVELOPMENT</span>
+              <span class="project-status">In development</span>
+            </div>
+
+            <h3>ElectroHub</h3>
+            <p>
+              A web application concept for browsing electronic components
+              with product information, inventory, and pricing.
+            </p>
+
+            <div class="tag-list">
+              <span>Vue.js</span>
+              <span>Django</span>
+              <span>API</span>
+            </div>
           </div>
         </article>
 
+        <!-- Portfolio -->
         <article class="project-card">
-          <div class="project-art portfolio-art">
-            <div class="mini-logo">ZM.</div>
-            <span>MY DIGITAL SPACE</span>
+          <div class="portfolio-visual">
+            <div class="portfolio-preview">
+              <span class="preview-logo">ZM.</span>
+              <div class="preview-lines">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="preview-title">My digital<br /><span>space.</span></div>
+              <div class="preview-button">Explore my work ↗</div>
+              <div class="preview-orb"></div>
+            </div>
           </div>
-          <p class="eyebrow">PERSONAL PROJECT · LEARNING</p>
-          <h3>Personal Portfolio</h3>
-          <p class="muted">
-            This portfolio website, built while learning Vue.js, CSS,
-            and the fundamentals of web development.
-          </p>
-          <div class="tags">
-            <span>Vue.js</span>
-            <span>Vite</span>
-            <span>CSS</span>
+
+          <div class="project-content">
+            <div class="project-meta">
+              <span class="project-category">PERSONAL WEBSITE</span>
+              <span class="project-status">Live</span>
+            </div>
+
+            <h3>Personal Portfolio</h3>
+            <p>
+              My personal portfolio website built to present my skills,
+              projects, and journey as an aspiring developer.
+            </p>
+
+            <div class="tag-list">
+              <span>Vue.js</span>
+              <span>CSS</span>
+              <span>Vercel</span>
+            </div>
+
+            <div class="project-links">
+              <a
+                  href="https://zander-portfolio-pxbk5jx3p-electro-hub1.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+              >
+                Live Website ↗
+              </a>
+              <a
+                  href="https://github.com/zandermamuad6-droid/zander-portfolio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+              >
+                GitHub ↗
+              </a>
+            </div>
           </div>
         </article>
       </div>
     </section>
 
-    <section id="skills" class="section">
-      <p class="eyebrow">03 / TOOLKIT</p>
-      <h2>Skills & <span>learning.</span></h2>
-      <p class="muted skill-intro">
-        My starting point. These skills will develop through study,
-        practice, and real projects.
-      </p>
+    <!-- Skills -->
+    <section id="skills" class="section-container section-block">
+      <div class="section-heading">
+        <p class="eyebrow">03 / MY TOOLKIT</p>
+        <h2>Skills I'm <span class="gradient-text">developing.</span></h2>
+        <p class="section-description">
+          These are the technologies and areas I'm learning through practice.
+        </p>
+      </div>
 
-      <div class="skills-list">
-        <div>01 <span>Problem Solving</span></div>
-        <div>02 <span>Critical Thinking</span></div>
-        <div>03 <span>Electronics Fundamentals</span></div>
-        <div>04 <span>Circuit Analysis</span></div>
-        <div>05 <span>HTML & CSS — Learning</span></div>
-        <div>06 <span>JavaScript — Learning</span></div>
-        <div>07 <span>Python — Learning</span></div>
-        <div>08 <span>Vue.js — Learning</span></div>
-        <div>09 <span>Django — Learning</span></div>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <span class="skill-symbol">⌘</span>
+          <h3>Frontend</h3>
+          <p>HTML · CSS · JavaScript · Vue.js</p>
+        </div>
+
+        <div class="skill-card">
+          <span class="skill-symbol">⌬</span>
+          <h3>Backend</h3>
+          <p>Python · Django · REST APIs</p>
+        </div>
+
+        <div class="skill-card">
+          <span class="skill-symbol">▤</span>
+          <h3>Tools</h3>
+          <p>Git · GitHub · WebStorm · Vercel</p>
+        </div>
+
+        <div class="skill-card">
+          <span class="skill-symbol">ϟ</span>
+          <h3>Electronics</h3>
+          <p>Electronic components · Circuits · Hardware</p>
+        </div>
       </div>
     </section>
 
-    <section id="contact" class="contact-section">
-      <p class="eyebrow">04 / CONTACT</p>
-      <h2>Let's connect<span>.</span></h2>
-      <p class="muted">
-        Have a question or want to connect? Feel free to reach out.
-      </p>
-      <a class="button primary" href="mailto:">Email me ↗</a>
+    <!-- Contact -->
+    <section id="contact" class="section-container section-block">
+      <div class="contact-card">
+        <p class="eyebrow">04 / GET IN TOUCH</p>
+        <h2>Let's build something <span class="gradient-text">together.</span></h2>
+        <p>
+          I'm open to learning opportunities, collaborations, and
+          conversations about development and technology.
+        </p>
 
-      <div class="contact-footer">
-        <span>OPEN TO LEARNING OPPORTUNITIES</span>
-        <a href="#home">BACK TO TOP ↑</a>
+        <!-- Palitan ang email address na ito ng sarili mong email. -->
+        <a class="button button-primary" href="mailto:your-email@example.com">
+          Send Me an Email <span>↗</span>
+        </a>
       </div>
     </section>
 
-    <footer class="footer">
+    <!-- Footer -->
+    <footer class="footer section-container">
       <a class="logo" href="#home">ZM.</a>
       <p>Designed and built while learning, one step at a time.</p>
       <p>© 2026 Zander Mamuad</p>
