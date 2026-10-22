@@ -1247,3 +1247,224 @@ img {
     animation-duration: 0.01ms !important;
   }
 }
+
+
+
+/* ===== MINIMAL NEON POLISH ===== */
+:root {
+  --bg: #080b12;
+  --surface: #0e1320;
+  --surface-light: #131a2a;
+  --border: #202b42;
+  --text: #f5f7ff;
+  --muted: #a2acc2;
+  --purple: #a78bfa;
+  --purple-light: #c4b5fd;
+}
+
+body {
+  background:
+          radial-gradient(ellipse at 82% 8%, rgb(87 75 190 / 10%), transparent 32%),
+          radial-gradient(ellipse at 10% 34%, rgb(48 100 190 / 5%), transparent 28%),
+          var(--bg);
+}
+
+.site-header {
+  background: rgb(8 11 18 / 88%);
+  border-bottom-color: rgb(137 151 190 / 12%);
+}
+
+.logo span {
+  text-shadow: 0 0 16px rgb(167 139 250 / 28%);
+}
+
+.navigation a {
+  transition: color 180ms ease, text-shadow 180ms ease;
+}
+
+.navigation a:hover {
+  color: #f5f0ff;
+  text-shadow: 0 0 12px rgb(167 139 250 / 32%);
+}
+
+.nav-cta {
+  border-color: #34304c;
+  background: rgb(167 139 250 / 3%);
+}
+
+.nav-cta:hover {
+  border-color: #8b78dc;
+  box-shadow: 0 0 18px rgb(139 120 220 / 12%);
+}
+
+.hero-section {
+  min-height: 640px;
+}
+
+.hero-content h1 {
+  letter-spacing: -3.5px;
+}
+
+.gradient-text {
+  background: linear-gradient(105deg, #c4b5fd 0%, #9b8cff 52%, #72b7ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-description {
+  color: #a9b2c8;
+}
+
+.button-primary {
+  color: #fff;
+  background: linear-gradient(110deg, #8b5cf6, #6865f5);
+  box-shadow: 0 5px 22px rgb(105 101 245 / 17%);
+}
+
+.button-primary:hover {
+  background: linear-gradient(110deg, #9a70ff, #7776ff);
+  box-shadow: 0 7px 26px rgb(105 101 245 / 27%);
+}
+
+.button-secondary:hover {
+  border-color: #6865a8;
+  box-shadow: 0 0 16px rgb(104 101 245 / 9%);
+}
+
+.visual-glow {
+  width: 290px;
+  height: 290px;
+  background: rgb(98 91 210 / 13%);
+  filter: blur(82px);
+}
+
+.code-window {
+  border-color: #29344e;
+  background: #0b101b;
+  box-shadow: 0 22px 65px rgb(0 0 0 / 30%), 0 0 24px rgb(87 105 220 / 5%);
+  transform: none;
+}
+
+.window-top {
+  background: #101725;
+  border-bottom-color: #202b40;
+}
+
+.code-footer {
+  border-top-color: #202b40;
+}
+
+.floating-card {
+  border-color: #2a3550;
+  background: rgb(13 19 32 / 94%);
+  box-shadow: 0 12px 34px rgb(0 0 0 / 22%);
+}
+
+.floating-icon {
+  background: rgb(93 151 255 / 9%);
+  color: #8fc5ff;
+}
+
+.purple-icon {
+  background: rgb(167 139 250 / 10%);
+  color: #c4b5fd;
+}
+
+.section-heading h2,
+.contact-card h2 {
+  letter-spacing: -2px;
+}
+
+.about-card,
+.skill-card,
+.project-card {
+  border-color: #222e45;
+  background: linear-gradient(145deg, #101726, #0c111c);
+}
+
+.project-card:hover {
+  border-color: #5c5a9b;
+  box-shadow: 0 8px 30px rgb(80 94 210 / 8%);
+  transform: translateY(-3px);
+}
+
+.project-image-wrap,
+.electrohub-visual,
+.portfolio-visual {
+  border-bottom-color: #222e45;
+  background-color: #0c1220;
+}
+
+.project-image {
+  background: #0c1220;
+}
+
+.image-label {
+  border-color: rgb(143 163 210 / 18%);
+  background: rgb(8 11 18 / 88%);
+}
+
+.circuit-decoration {
+  border-color: rgb(117 132 255 / 13%);
+}
+
+.electrohub-visual {
+  background:
+          radial-gradient(ellipse at center, rgb(93 92 215 / 13%), transparent 66%),
+          #0c1220;
+}
+
+.electrohub-symbol,
+.card-symbol,
+.skill-icon {
+  border-color: #303a5b;
+  background: rgb(117 105 238 / 8%);
+  color: #b9b2ff;
+}
+
+.portfolio-visual {
+  background:
+          radial-gradient(ellipse at 50% 100%, rgb(65 104 153 / 12%), transparent 65%),
+          #0c1220;
+}
+
+.portfolio-browser {
+  border-color: #303b58;
+  box-shadow: 0 15px 35px rgb(0 0 0 / 28%), 0 0 22px rgb(90 112 225 / 6%);
+}
+
+.tag-list span {
+  border-color: #29344b;
+  background: rgb(255 255 255 / 2%);
+}
+
+.contact-card {
+  border-color: #2c3552;
+  background:
+          radial-gradient(ellipse at 50% 0%, rgb(105 91 214 / 12%), transparent 65%),
+          #0e1320;
+}
+
+.contact-decoration {
+  border-color: rgb(145 132 255 / 10%);
+}
+
+.site-footer {
+  border-top-color: #202b42;
+}
+
+@media (max-width: 680px) {
+  .hero-section {
+    min-height: auto;
+  }
+
+  .hero-content h1 {
+    letter-spacing: -2.5px;
+  }
+
+  .section-heading h2,
+  .contact-card h2 {
+    letter-spacing: -1.5px;
+  }
+}
