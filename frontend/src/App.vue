@@ -26,7 +26,7 @@
             </div>
             <p class="eyebrow">HELLO, I'M</p>
             <h1>Zander<br /><span class="gradient-text">Mamuad.</span></h1>
-            <h2>Future Software Developer</h2>
+            <h2>Software Developer</h2>
             <p class="hero-description">
               I'm building my skills in web development, programming, and
               electronics. I enjoy learning how things work and turning ideas
@@ -47,28 +47,15 @@
 
           <div class="hero-visual">
             <div class="visual-glow"></div>
-            <div class="code-window">
-              <div class="window-top">
-                <div class="window-dots"><span></span><span></span><span></span></div>
-                <span class="window-title">developer.js</span>
-                <span class="window-menu">•••</span>
-              </div>
-              <div class="code-content">
-                <p class="code-line"><span class="line-number">01</span> <span class="code-purple">const</span> <span class="code-blue">developer</span> = {</p>
-                <p class="code-line indent"><span class="code-blue">name</span>: <span class="code-green">'Zander Mamuad'</span>,</p>
-                <p class="code-line indent"><span class="code-blue">role</span>: <span class="code-green">'Student Developer'</span>,</p>
-                <p class="code-line indent"><span class="code-blue">interests</span>: [</p>
-                <p class="code-line indent-more"><span class="code-green">'Web Development'</span>,</p>
-                <p class="code-line indent-more"><span class="code-green">'Electronics'</span>,</p>
-                <p class="code-line indent-more"><span class="code-green">'Technology'</span></p>
-                <p class="code-line indent">],</p>
-                <p class="code-line indent"><span class="code-blue">mindset</span>: <span class="code-green">'Always Learning'</span></p>
-                <p class="code-line">};</p>
-                <p class="code-line code-comment">// Building something better every day.</p>
-              </div>
-              <div class="code-footer">
-                <span><span class="status-dot"></span> Always learning</span>
-                <span>UTF-8</span>
+            <div class="profile-frame">
+              <img
+                  class="profile-photo"
+                  src="/images/profile.png"
+                  alt="Zander Mamuad - Software Developer"
+              />
+              <div class="profile-caption">
+                <strong>Zander Mamuad</strong>
+                <span>Software Developer</span>
               </div>
             </div>
             <div class="floating-card floating-card-top">
@@ -266,8 +253,40 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 
 const currentYear = new Date().getFullYear()
 const imageError = ref(false)
+
+let revealObserver
+
+onMounted(() => {
+  const revealElements = document.querySelectorAll(
+      '.section-block .section-heading, .about-card, .project-card, .skill-card, .contact-card'
+  )
+
+  if (!('IntersectionObserver' in window)) {
+    revealElements.forEach((element) => element.classList.add('is-visible'))
+    return
+  }
+
+  revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible')
+        observer.unobserve(entry.target)
+      }
+    })
+  }, { threshold: 0.12, rootMargin: '0px 0px -35px 0px' })
+
+  revealElements.forEach((element, index) => {
+    element.style.setProperty('--reveal-delay', `${(index % 4) * 100}ms`)
+    element.classList.add('reveal-on-scroll')
+    revealObserver.observe(element)
+  })
+})
+
+onBeforeUnmount(() => {
+  revealObserver?.disconnect()
+})
 </script>

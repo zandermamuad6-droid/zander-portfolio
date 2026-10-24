@@ -1248,223 +1248,281 @@ img {
   }
 }
 
-
-
-/* ===== MINIMAL NEON POLISH ===== */
-:root {
-  --bg: #080b12;
-  --surface: #0e1320;
-  --surface-light: #131a2a;
-  --border: #202b42;
-  --text: #f5f7ff;
-  --muted: #a2acc2;
-  --purple: #a78bfa;
-  --purple-light: #c4b5fd;
+/* ========================================
+   NEON FUTURISTIC PORTFOLIO ANIMATIONS
+   ======================================== */
+.hero-content {
+  animation: neonFadeUp 0.9s ease-out both;
 }
 
-body {
-  background:
-          radial-gradient(ellipse at 82% 8%, rgb(87 75 190 / 10%), transparent 32%),
-          radial-gradient(ellipse at 10% 34%, rgb(48 100 190 / 5%), transparent 28%),
-          var(--bg);
+.hero-visual {
+  animation: neonFadeIn 1.1s ease-out both;
+  animation-delay: 0.15s;
 }
 
-.site-header {
-  background: rgb(8 11 18 / 88%);
-  border-bottom-color: rgb(137 151 190 / 12%);
+/* Profile photo hero card */
+.profile-frame {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 390px);
+  padding: 11px;
+  overflow: visible;
+  border: 1px solid #594477;
+  border-radius: 22px;
+  background: linear-gradient(145deg, #191421, #0d0b13);
+  box-shadow: 0 0 28px rgb(167 139 250 / 12%);
+  animation: profileFloat 5s ease-in-out infinite;
 }
 
-.logo span {
-  text-shadow: 0 0 16px rgb(167 139 250 / 28%);
+.profile-photo {
+  display: block;
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 14px;
+  background: #e8e8ee;
 }
 
-.navigation a {
-  transition: color 180ms ease, text-shadow 180ms ease;
+.profile-caption {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 14px 8px 7px;
 }
 
-.navigation a:hover {
-  color: #f5f0ff;
-  text-shadow: 0 0 12px rgb(167 139 250 / 32%);
+.profile-caption strong {
+  color: #f3f0fa;
+  font-size: 14px;
 }
 
-.nav-cta {
-  border-color: #34304c;
-  background: rgb(167 139 250 / 3%);
+.profile-caption span {
+  color: #b9a3f5;
+  font-size: 12px;
 }
 
-.nav-cta:hover {
-  border-color: #8b78dc;
-  box-shadow: 0 0 18px rgb(139 120 220 / 12%);
-}
-
-.hero-section {
-  min-height: 640px;
-}
-
-.hero-content h1 {
-  letter-spacing: -3.5px;
-}
-
-.gradient-text {
-  background: linear-gradient(105deg, #c4b5fd 0%, #9b8cff 52%, #72b7ff 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.hero-description {
-  color: #a9b2c8;
-}
-
-.button-primary {
-  color: #fff;
-  background: linear-gradient(110deg, #8b5cf6, #6865f5);
-  box-shadow: 0 5px 22px rgb(105 101 245 / 17%);
-}
-
-.button-primary:hover {
-  background: linear-gradient(110deg, #9a70ff, #7776ff);
-  box-shadow: 0 7px 26px rgb(105 101 245 / 27%);
-}
-
-.button-secondary:hover {
-  border-color: #6865a8;
-  box-shadow: 0 0 16px rgb(104 101 245 / 9%);
-}
-
-.visual-glow {
-  width: 290px;
-  height: 290px;
-  background: rgb(98 91 210 / 13%);
-  filter: blur(82px);
+.profile-frame:hover {
+  border-color: #a78bfa;
+  box-shadow: 0 0 32px rgb(167 139 250 / 24%);
 }
 
 .code-window {
-  border-color: #29344e;
-  background: #0b101b;
-  box-shadow: 0 22px 65px rgb(0 0 0 / 30%), 0 0 24px rgb(87 105 220 / 5%);
-  transform: none;
+  animation: neonBorderPulse 4s ease-in-out 1s infinite;
+  transition: transform 0.35s ease;
 }
 
-.window-top {
-  background: #101725;
-  border-bottom-color: #202b40;
+.code-window:hover {
+  transform: translateY(-5px) rotate(0deg);
 }
 
-.code-footer {
-  border-top-color: #202b40;
+.floating-card-top {
+  animation: floatTop 4s ease-in-out infinite;
 }
 
-.floating-card {
-  border-color: #2a3550;
-  background: rgb(13 19 32 / 94%);
-  box-shadow: 0 12px 34px rgb(0 0 0 / 22%);
+.floating-card-bottom {
+  animation: floatBottom 4.5s ease-in-out infinite;
 }
 
-.floating-icon {
-  background: rgb(93 151 255 / 9%);
-  color: #8fc5ff;
+.status-dot {
+  animation: statusPulse 2s ease-in-out infinite;
 }
 
-.purple-icon {
-  background: rgb(167 139 250 / 10%);
-  color: #c4b5fd;
+.navigation a,
+.nav-cta,
+.button {
+  transition: color 0.25s ease, background 0.25s ease,
+  border-color 0.25s ease, box-shadow 0.25s ease,
+  transform 0.25s ease;
 }
 
-.section-heading h2,
-.contact-card h2 {
-  letter-spacing: -2px;
+.navigation a:hover {
+  color: var(--purple-light);
+  text-shadow: 0 0 12px rgb(167 139 250 / 65%);
 }
 
-.about-card,
-.skill-card,
-.project-card {
-  border-color: #222e45;
-  background: linear-gradient(145deg, #101726, #0c111c);
+.nav-cta:hover,
+.button-secondary:hover {
+  box-shadow: 0 0 18px rgb(167 139 250 / 15%);
 }
 
-.project-card:hover {
-  border-color: #5c5a9b;
-  box-shadow: 0 8px 30px rgb(80 94 210 / 8%);
+.button-primary:hover {
+  box-shadow: 0 0 12px rgb(167 139 250 / 45%),
+  0 0 28px rgb(167 139 250 / 18%);
   transform: translateY(-3px);
 }
 
-.project-image-wrap,
-.electrohub-visual,
-.portfolio-visual {
-  border-bottom-color: #222e45;
-  background-color: #0c1220;
+.about-card,
+.mini-card,
+.project-card,
+.skill-card {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease,
+  transform 0.3s ease;
 }
 
-.project-image {
-  background: #0c1220;
+.about-card:hover,
+.mini-card:hover,
+.project-card:hover,
+.skill-card:hover {
+  border-color: rgb(167 139 250 / 65%);
+  box-shadow: 0 0 18px rgb(167 139 250 / 9%),
+  inset 0 0 18px rgb(167 139 250 / 3%);
+  transform: translateY(-5px);
 }
 
-.image-label {
-  border-color: rgb(143 163 210 / 18%);
-  background: rgb(8 11 18 / 88%);
-}
-
-.circuit-decoration {
-  border-color: rgb(117 132 255 / 13%);
-}
-
-.electrohub-visual {
-  background:
-          radial-gradient(ellipse at center, rgb(93 92 215 / 13%), transparent 66%),
-          #0c1220;
-}
-
-.electrohub-symbol,
 .card-symbol,
+.mini-card-icon,
 .skill-icon {
-  border-color: #303a5b;
-  background: rgb(117 105 238 / 8%);
-  color: #b9b2ff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease,
+  transform 0.3s ease;
 }
 
-.portfolio-visual {
-  background:
-          radial-gradient(ellipse at 50% 100%, rgb(65 104 153 / 12%), transparent 65%),
-          #0c1220;
-}
-
-.portfolio-browser {
-  border-color: #303b58;
-  box-shadow: 0 15px 35px rgb(0 0 0 / 28%), 0 0 22px rgb(90 112 225 / 6%);
-}
-
-.tag-list span {
-  border-color: #29344b;
-  background: rgb(255 255 255 / 2%);
+.about-card:hover .card-symbol,
+.mini-card:hover .mini-card-icon,
+.skill-card:hover .skill-icon {
+  border-color: var(--purple);
+  box-shadow: 0 0 18px rgb(167 139 250 / 22%);
+  transform: scale(1.05);
 }
 
 .contact-card {
-  border-color: #2c3552;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  animation: contactGlow 5s ease-in-out infinite;
+}
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 700ms ease,
+  transform 700ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes neonFadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes neonFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes profileFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes floatTop {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes floatBottom {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
+@keyframes statusPulse {
+  0%, 100% { box-shadow: 0 0 5px rgb(112 225 181 / 25%); }
+  50% { box-shadow: 0 0 14px rgb(112 225 181 / 75%); }
+}
+
+@keyframes neonBorderPulse {
+  0%, 100% {
+    box-shadow: 0 25px 80px rgb(0 0 0 / 35%);
+    border-color: #352b45;
+  }
+  50% {
+    box-shadow: 0 25px 80px rgb(0 0 0 / 35%),
+    0 0 22px rgb(167 139 250 / 13%);
+    border-color: #594477;
+  }
+}
+
+@keyframes contactGlow {
+  0%, 100% { border-color: #40314f; }
+  50% { border-color: #655080; }
+}
+
+@media (max-width: 760px) {
+  .profile-frame { width: min(100%, 340px); }
+  .profile-photo { height: 360px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation: none !important;
+    transition: none !important;
+  }
+  .reveal-on-scroll,
+  .reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+
+/* ========================================
+   SUBTLE MOVING NEON BACKGROUND
+   Added without replacing existing styles
+   ======================================== */
+
+body {
+  position: relative;
+  isolation: isolate;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: -25%;
+  z-index: -1;
+  pointer-events: none;
   background:
-          radial-gradient(ellipse at 50% 0%, rgb(105 91 214 / 12%), transparent 65%),
-          #0e1320;
+          radial-gradient(
+                  ellipse at 20% 30%,
+                  rgb(124 58 237 / 13%),
+                  transparent 38%
+          ),
+          radial-gradient(
+                  ellipse at 80% 65%,
+                  rgb(167 139 250 / 10%),
+                  transparent 35%
+          ),
+          radial-gradient(
+                  ellipse at 50% 100%,
+                  rgb(88 28 135 / 9%),
+                  transparent 40%
+          );
+  background-size: 140% 140%;
+  background-position: 0% 0%;
+  animation: neonBackgroundDrift 22s ease-in-out infinite alternate;
+  will-change: background-position;
 }
 
-.contact-decoration {
-  border-color: rgb(145 132 255 / 10%);
-}
-
-.site-footer {
-  border-top-color: #202b42;
-}
-
-@media (max-width: 680px) {
-  .hero-section {
-    min-height: auto;
+@keyframes neonBackgroundDrift {
+  0% {
+    background-position: 0% 0%;
   }
 
-  .hero-content h1 {
-    letter-spacing: -2.5px;
+  50% {
+    background-position: 100% 40%;
   }
 
-  .section-heading h2,
-  .contact-card h2 {
-    letter-spacing: -1.5px;
+  100% {
+    background-position: 30% 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before {
+    animation: none;
+    will-change: auto;
   }
 }
